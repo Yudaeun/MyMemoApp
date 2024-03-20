@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.AddFragment"
+    android:background="#434551">
+
+    <LinearLayout
+        android:id="@+id/add_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:padding="5dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+<!--        <ImageView-->
+<!--            android:id="@+id/add_cancel"-->
+<!--            android:layout_width="25dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:src="@drawable/icon_cancel"/>-->
+
+        <Button
+            android:id="@+id/add_cancel"
+            android:layout_width="75dp"
+            android:layout_height="match_parent"
+            android:text="취소"
+            android:textStyle="bold"
+            android:layout_margin="1dp"
+            android:textColor="#434551"
+            android:backgroundTint="#FFB3B3"
+            ></Button>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="새 메모 작성 중 =^._.^= "
+            android:textStyle="bold"
+            android:textColor="#FFB3B3"
+            android:textSize="17dp"
+            android:fontFamily="@font/goyang"
+            android:gravity="center"/>
+
+<!--        <ImageView-->
+<!--            android:id="@+id/add_complete"-->
+<!--            android:layout_width="25dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:src="@drawable/icon_complete"/>-->
+
+        <Button
+            android:id="@+id/add_complete"
+            android:layout_width="75dp"
+            android:layout_height="match_parent"
+            android:text="완료"
+            android:textStyle="bold"
+            android:layout_margin="1dp"
+            android:textColor="#434551"
+            android:backgroundTint="#FFB3B3"
+            ></Button>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/add_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingHorizontal="15dp"
+        android:paddingTop="18dp"
+        android:hint="이 곳에 작성해주세요."
+        android:textColorHint="#FFB3B3"
+        android:textColor="#FFB3B3"
+        android:textSize="16dp"
+        android:fontFamily="@font/goyang"
+        android:textStyle="bold"
+        android:gravity="start"
+        android:inputType="textMultiLine"
+        android:background="@null"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_top"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
