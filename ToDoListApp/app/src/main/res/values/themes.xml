@@ -1,8 +1,10 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.ToDoListApp" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.ToDoListApp" parent="Theme.Material3.DayNight">
+        <item name="android:statusBarColor" tools:targetApi="l">#9FFFC3C3</item>
+        <item name="android:windowLightStatusBar">true</item>
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+         <item name="colorPrimary">#FFC3C3</item>
     </style>
 
     <style name="Theme.ToDoListApp" parent="Base.Theme.ToDoListApp" />

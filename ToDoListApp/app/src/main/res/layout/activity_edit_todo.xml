@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="10dp"
+    android:layout_margin="20dp"
     tools:context=".EditTodoActivity">
 
     <EditText
@@ -16,6 +16,9 @@
         app:layout_constraintBottom_toTopOf="@+id/etTodoContent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="#FFAFAF"
+        android:layout_marginStart="15dp"
+        android:textSize="26dp"
         ></EditText>
 
     <EditText
@@ -30,20 +33,24 @@
         android:gravity="start|top"
         android:inputType="textMultiLine"
         android:singleLine="false"
+        android:backgroundTint="#FFAFAF"
+        android:layout_marginStart="15dp"
+        android:textSize="20dp"
         ></EditText>
 
     <Button
         android:id="@+id/btnSave"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_margin="17dp"
+        android:textSize="20dp"
         android:text="Save"
         android:textAllCaps="false"
         app:layout_constraintTop_toBottomOf="@+id/etTodoContent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:backgroundTint="#FFB4B4"
+        android:backgroundTint="#FFAFAF"
         ></Button>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

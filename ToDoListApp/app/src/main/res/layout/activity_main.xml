@@ -14,7 +14,8 @@
         layout_constraintBottom_toBottomOf="parent"
         layout_constraintStart_toStartOf="parent"
         layout_constraintEnd_toEndOf="parent"
-        tools:listitem="@layout/item_todo_list">
+        tools:listitem="@layout/item_todo_list"
+        android:layout_margin="15dp">
 
     </androidx.recyclerview.widget.RecyclerView>
 
@@ -27,6 +28,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:src="@drawable/ic_add"
         android:tint="@color/white"
+        android:backgroundTint="#FFAFAF"
         >
 
     </com.google.android.material.floatingactionbutton.FloatingActionButton>

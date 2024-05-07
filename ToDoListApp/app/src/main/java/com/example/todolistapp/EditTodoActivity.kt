@@ -9,6 +9,7 @@ import java.text.SimpleDateFormat
 
 class EditTodoActivity : AppCompatActivity() {
     lateinit var binding: ActivityEditTodoBinding
+    private var todo: TodoDto?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,6 +22,9 @@ class EditTodoActivity : AppCompatActivity() {
         if(type.equals("ADD")){
             binding.btnSave.text="추가하기"
         }else{
+            todo=intent.getSerializableExtra("item") as TodoDto?
+            binding.etTodoTitle.setText(todo!!.title)
+            binding.etTodoContent.setText(todo!!.content)
             binding.btnSave.text="수정하기"
         }
 
@@ -30,7 +34,7 @@ class EditTodoActivity : AppCompatActivity() {
             val currentDate=SimpleDateFormat("yyyy-MM-dd HH:mm").format(System.currentTimeMillis())
 
             if (type.equals("ADD")){
-                if(title.isNotEmpty()&&content.isNotEmpty()){
+                if(title.isNotEmpty()){
                     val todo=TodoDto(0,title,content,currentDate,false)
                     val intent= Intent().apply{
                         putExtra("todo",todo)
@@ -38,11 +42,21 @@ class EditTodoActivity : AppCompatActivity() {
                     }
                     setResult(RESULT_OK,intent)
                     finish()
-                } else{
+                    }
+                }else{
+                if (title.isNotEmpty()){
+                    val todo=TodoDto(todo!!.id,title,content,currentDate,todo!!.isChecked)
 
+                    val intent=Intent().apply{
+                        putExtra("todo",todo)
+                        putExtra("flag","putEdit")
+                    }
+                    setResult(RESULT_OK,intent)
+                    finish()
                 }
             }
 
         }
+
     }
 }

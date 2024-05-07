@@ -3,6 +3,7 @@ package com.example.todolistapp.dto
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import org.jetbrains.annotations.NotNull
 import java.io.Serializable
 
 @Entity(tableName="todo")
@@ -12,6 +13,7 @@ class TodoDto (
     var id: Long=0,
 
     @ColumnInfo(name="title")
+    @NotNull
     val title: String,
 
     @ColumnInfo(name="content")
